@@ -33,7 +33,10 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ## Model 1 SIM~ARMS
 
 ### scatterplot
-
+```{r}
+plot(SIMS~ARM,data=data)
+```
+Based off of the plots image, we can see that the scatter plot has a positive shift since it shifts right.
 ### Numerical results
 
 
