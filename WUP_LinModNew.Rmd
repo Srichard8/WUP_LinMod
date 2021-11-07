@@ -36,15 +36,41 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ```{r}
 plot(SIMS~ARM,data=data)
 ```
-Based off of the plots image, we can see that the scatter plot has a positive shift since it shifts right.
-### Numerical results
 
+Based off of the plots image, we can see that the scatter plot has a positive shift since it shifts right.  
+### Numerical results
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+Based off of the number, we can observe that there's a positive correlation.  
 
 ### Inferential  (Build model.1)
+
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+This model shows a formula line of Residuals and Coefficient arithmetic.
+SIMS= 0.054563*ARM-4.095160
 
 #### Predict at target point
 
 
+```{r}
+0.054563*88-4.095160
+```
+
+While plugging in 88 and removing ARM we got the result number 0.707384 which helps us predict what the number could be.
+
+```{r}
+new <- data.frame(ARM = 88, GRIP=94)
+```
+```{r}
+predict(model.1, new)
+```
+This prediction gives us a similar results from the last the last prediction (prediction )
 #### scatterplot with model fit
   
 
