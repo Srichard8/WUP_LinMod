@@ -112,11 +112,26 @@ which, is opposite from SIMS and ARMS result numbers with, SIMS and ARMS showing
 
 #### predict model.2 at target point
 
+```{r}
+predict(model.2, new)
+```
+```{r}
+0.045463*94-4.809675
+```
+Our prediction number based off the model plot is -0.5361543.
+
 #### now add the model fit to our plot for model.2
   
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+basicNN + geom_point() + geom_smooth(method=lm)
+```
 
+This is the GRIP model result. This GRIP plot shows the same result as the ARM plot in the beginning. If we use the prediction value it matches x=94 for GRIP.
 
 ## Model 3 SIM~ARM+GRIP
+
+
 
 ### Numerical results (cor)
 
