@@ -135,9 +135,15 @@ This is the GRIP model result. This GRIP plot shows the same result as the ARM p
 
 ### Numerical results (cor)
 
-`
-  
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+We have a positive correlation between ARM and GRIP so far based on the multiple results we got in numerical results. GRIP shows a higher percentage (0.6398458) than ARM (0.6860073) but both numbers still show a positive correlation since their almost similar.  
+
 ### Inferential  (Build 2-dimentional model.3)
+
+
 
 #### predict model.3 at target point
   
