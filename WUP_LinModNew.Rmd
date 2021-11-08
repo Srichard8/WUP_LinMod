@@ -179,3 +179,10 @@ Both models use the SIMS and GRIP data which helps them compare in predicting nu
 
 ## Informally compare Model.1 with model.2
 
+```{r}
+anova(model.1,model.2)
+```
+
+Based off of each anova comparison we made with model.2 and model.3/ model.1 & model.3 with numbers being similarly close in the beginning, model.1 and model.2 have he closest comparison data wise and number wise. Both model.1 and and model.2 use 2 pieces of data to get a decent percentage both starting their numbers with 145 showing a close relationship between both of their numbers analyzed through the variance table.
+
+
