@@ -161,12 +161,21 @@ Our residual standard error 1.144 which is smaller than our other models, and ou
 
 ## Comparing nested models ANOVA Test
 
+### Model.1 vs Model.3
+
 ```{r}
-anova(model.1,model.2)
+anova(model.1,model.3)
 ```
 
-### Model.1 vs Model.3
+Model 1 used the Data of SIMS and ARMS while Model 2 used the data of SIMS ~ GRIP + ARM which shows some comparing and contrasting in data. Both models confide in using the data in SIMS and ARM which shows the slight comparison. Both models compared with using numbers that start with 14 (Model 1 145.217.88 & Model 2 144 188.43.
+
 ### Model.2 vs Model.3
+
+```{r}
+anova(model.2,model.3)
+```
+
+Both models use the SIMS and GRIP data which helps them compare in predicting
 
 ## Informally compare Model.1 with model.2
 
