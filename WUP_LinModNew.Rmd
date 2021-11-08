@@ -57,6 +57,7 @@ SIMS= 0.054563*ARM-4.095160
 
 #### Predict at target point
 
+SIMS
 
 ```{r}
 0.054563*88-4.095160
@@ -67,12 +68,21 @@ While plugging in 88 and removing ARM we got the result number 0.707384 which he
 ```{r}
 new <- data.frame(ARM = 88, GRIP=94)
 ```
+
 ```{r}
 predict(model.1, new)
 ```
-This prediction gives us a similar results from the last the last prediction (prediction )
+
+This prediction gives us a similar results from the last the last prediction (prediction at target point).
+
 #### scatterplot with model fit
   
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+basicNN + geom_point() + geom_smooth(method=lm)
+```
+
+This chart gives us the possible scatter plot/line solution for our data. 
 
 ## Model 2 SIM~GRIP
 
