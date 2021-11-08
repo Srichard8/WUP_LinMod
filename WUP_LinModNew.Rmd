@@ -144,12 +144,26 @@ We have a positive correlation between ARM and GRIP so far based on the multiple
 
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 <- lm(SIMS ~GRIP + ARM,data=data)
+summary.lm(model.3)
+```
 
+This model shows a higher percentage of numbers than model 2. We can predict that the numbers are gonna be in a higher percentage than 0.
 
 #### predict model.3 at target point
   
+```{r}
+predict(model.3, new, interval = "prediction")
+```  
+
+Our residual standard error 1.144 which is smaller than our other models, and our multiple R-squared is bigger, which makes it better and a more reliable prediction.
 
 ## Comparing nested models ANOVA Test
+
+```{r}
+anova(model.1,model.2)
+```
 
 ### Model.1 vs Model.3
 ### Model.2 vs Model.3
