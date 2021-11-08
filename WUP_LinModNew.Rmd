@@ -86,14 +86,29 @@ This chart gives us the possible scatter plot/line solution for our data.
 
 ## Model 2 SIM~GRIP
 
+
+
 ### Now add in scatterplot
+```{r}
+plot(SIMS~GRIP,data=data)
+```
 
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
 
+This SIMS x GRIP result has a smaller number compared to the SIMS x ARM result.
 ### Inferential  (Build model.2)
-  
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```  
+
+This model shows a larger result of numbers in it's residuals area,
+which, is opposite from SIMS and ARMS result numbers with, SIMS and ARMS showing result #'s of 0.7 while Residuals max shows a higher result number of 3.3.
 
 #### predict model.2 at target point
 
