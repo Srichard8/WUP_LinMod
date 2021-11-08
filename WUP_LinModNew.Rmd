@@ -175,7 +175,7 @@ Model 1 used the Data of SIMS and ARMS while Model 2 used the data of SIMS ~ GRI
 anova(model.2,model.3)
 ```
 
-Both models use the SIMS and GRIP data which helps them compare in predicting
+Both models use the SIMS and GRIP data which helps them compare in predicting numbers in the same percentage range. Both models have numbers that compare with their numbers starting with 14, Model 1's number is estimated at 145 while Model 2's number starts off with 144, both numbers comparing with the way they start off.
 
 ## Informally compare Model.1 with model.2
 
